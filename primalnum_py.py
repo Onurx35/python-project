@@ -7,12 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1HkGy2EWSEaXR3HxN9bMq1X6QTHVt2AHF
 """
 
-num = int(input("enter a number: "))
-count = 0
-for i in range(1, num+1):
-  if num % i == 0:
-    count +=1
-if (num==0) or (num==1) or (count>=3):
-  print(num, "is not a prime number")
-else:
-  print(num, "is a prime number")
+prime_list = []
+c = 0
+for i in range(2, 101):
+  for j in range(2, i):
+    if i % j == 0:
+      c = False
+      break
+    else:
+      c = True
+  if c :
+    prime_list.append(i)
+print(prime_list)
